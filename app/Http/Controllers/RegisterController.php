@@ -14,7 +14,8 @@ class RegisterController extends Controller
     {
         if (auth()->user()) {
             return to_route('home', [
-                'posts' => auth()->user()->posts
+                'posts' => auth()->user()->posts,
+                // 'posts' => Auth::user()->posts,
             ]);
         }
 
